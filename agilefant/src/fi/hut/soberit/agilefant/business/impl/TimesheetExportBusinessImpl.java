@@ -181,6 +181,13 @@ public class TimesheetExportBusinessImpl implements TimesheetExportBusiness {
         effortColumn.setCellType(Cell.CELL_TYPE_NUMERIC);
         effortColumn.setCellValue((double)rowData.getEffort()/60.0);
         effortColumn.setCellStyle(this.decimalFormat);
+		
+	   //Malu Start - original estimate
+         Cell originalEstimateColumn = row.createCell(ORIGINAL_ESTIMATE_COLUMN_NUM);
+         originalEstimateColumn.setCellType(Cell.CELL_TYPE_NUMERIC);
+         originalEstimateColumn.setCellValue((double)rowData.getTask().getOriginalEstimate().getMinorUnits()/60.0);
+         originalEstimateColumn.setCellStyle(this.decimalFormat);
+       //Malu End - original estimate
         
     }
 
