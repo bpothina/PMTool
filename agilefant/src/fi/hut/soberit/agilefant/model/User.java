@@ -63,7 +63,9 @@ public class User implements NamedObject {
     private String initials;
     
     private boolean enabled = true;
-    
+	
+    private String role; // Shravani - role changes
+	
     private boolean admin = true;
 
     private Collection<Team> teams = new HashSet<Team>();
@@ -205,7 +207,23 @@ public class User implements NamedObject {
         this.initials = initials;
     }
         
-    /**
+	//Shravani - Start role changes
+    /** Get role. */
+    @JSON
+    @NotAudited
+    public String getRole() {
+        return role;
+    }
+
+    /** Set role. */
+    public void setRole(String role) {
+        this.role = role;
+    }
+	//Shravani - End role changes
+
+	
+
+		/**
      * Get the user's teams.
      * 
      * @return the teams

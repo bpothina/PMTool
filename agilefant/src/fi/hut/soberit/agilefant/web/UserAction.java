@@ -48,6 +48,9 @@ public class UserAction extends ActionSupport implements CRUDAction, Prefetching
     
     private Set<Integer> teamIds = new HashSet<Integer>();
     private boolean teamsChanged = false;
+	
+	private String role; //Shravani - role
+	
            
     @Autowired
     private UserBusiness userBusiness;
@@ -213,4 +216,9 @@ public class UserAction extends ActionSupport implements CRUDAction, Prefetching
         isAdmin = loggedUser.isAdmin();
     }
 
+	//Shravani Start - role
+    public void setRole(String role) {
+        this.role = role;
+    }
+   //Shravani End - role
 }
