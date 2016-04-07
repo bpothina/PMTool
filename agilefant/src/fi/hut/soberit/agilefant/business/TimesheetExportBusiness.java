@@ -29,6 +29,7 @@ public interface TimesheetExportBusiness {
     public static final int DATE_COLUMN_NUM = 9;
     public static final int EFFORT_COLUMN_NUM = 10;
     public static final String DATE_FORMAT = "dd.mm.yyyy hh:mm";
+	public static final int ORIGINAL_ESTIMATE_COLUMN_NUM = 11; //Malu - reporting
     public static final String EFFORT_FORMAT = "#,##0.00";
     public static final short HEADER_FONT_WEIGHT = Font.BOLDWEIGHT_BOLD;
     
