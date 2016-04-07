@@ -197,7 +197,13 @@
 <c:if test="${hidecreateAndSearchWrapper != true}">
   <div id="createAndSearchWrapper">
     <c:if test="${hideControl != true}">
-          
+       <!-- Samarth - Disable Create-New link for a non-admin-->
+	<c:if test="${currentUser.admin}">	
+      <div style="position: relative; left: 1em;">
+        <a href="#" id="createNewMenuLink" onclick="return false;"><img src="static/img/add.png" alt="+" /><span style="font-size: 120%;">Create new</span></a> 
+      </div>
+     </c:if>
+   
       <div style="position: relative; left: 1em; top:0.5em;">
         <a id="quickSearchLink" href="#"><img src="static/img/search_small.png" alt="Search items" /><span id="quickSearchLinkText" style="font-size: 120%;">Search items</span></a>
       </div>
